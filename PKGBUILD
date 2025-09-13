@@ -1,10 +1,10 @@
 # Maintainer of original: Martin Dünkelmann <nc-duenkekl3 at netcologne.de>
 # Custom patch applied for Arch
 
-pkgname=moneymanagerex-git
-pkgver=1.8.0
+pkgname=moneymanagerex-patched
+pkgver=1.6.4.r4380.g2e244b6c8
 pkgrel=1
-pkgdesc="MoneyManagerEx is an easy-to-use personal finance suite. This package will always point to the newest commit."
+pkgdesc="MoneyManagerEx is an easy-to-use personal finance suite. This package will always point to the newest tagged version."
 arch=('x86_64')
 url="http://www.moneymanagerex.org/"
 license=('GPL')
@@ -14,9 +14,9 @@ optdepends=('cups: for printing support')
 replaces=('mmex')
 provides=('moneymanagerex')
 conflicts=('moneymanagerex')
-source=(git+https://github.com/moneymanagerex/moneymanagerex.git)
-source=('patches/CMP0037_policy.patch')
-sha512sums=('SKIP')
+source=('file://CMP0037_policy.patch'
+        git+https://github.com/moneymanagerex/moneymanagerex.git#tag=v${pkgver})
+sha512sums=('SKIP' 'SKIP')
 
 pkgver() {
   cd "${srcdir}"/moneymanagerex
