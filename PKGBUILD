@@ -2,7 +2,7 @@
 # Custom patch applied for Arch
 
 pkgname=moneymanagerex-patched
-pkgver=1.6.4.r4380.g2e244b6c8
+pkgver=1.9.1
 pkgrel=1
 pkgdesc="MoneyManagerEx is an easy-to-use personal finance suite. This package will always point to the newest tagged version."
 arch=('x86_64')
