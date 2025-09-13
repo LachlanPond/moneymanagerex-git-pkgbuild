@@ -1,0 +1,11 @@
+--- CMakeLists.txt	2025-09-13 20:34:10.941901538 +1000
++++ CMakeLists.txt.2	2025-09-13 20:33:12.344082557 +1000
+@@ -872,7 +872,7 @@
+     # allow use reserved for cpack package target
+     cmake_policy(PUSH)
+     if(POLICY CMP0037)
+-        cmake_policy(SET CMP0037 OLD)
++        cmake_policy(SET CMP0037 NEW)
+     endif()
+     add_custom_target(package
+         COMMAND sh -c "if [ `id -u` -eq 0 ]; then chown nobody -R . && runuser nobody -c makepkg; else makepkg; fi"
