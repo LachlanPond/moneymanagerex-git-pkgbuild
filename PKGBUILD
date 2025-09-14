@@ -47,4 +47,9 @@ package() {
   cd "${srcdir}"/moneymanagerex
 
   make DESTDIR="${pkgdir}" install
+
+  # Manually remove files relating to fmt
+  rm -rf ${pkgdir}/usr/include/fmt/*
+  rm -rf ${pkgdir}/usr/lib/cmake/fmt/*
+  rm ${pkgdir}/usr/lib/pkgconfig/fmt.pc
 }
