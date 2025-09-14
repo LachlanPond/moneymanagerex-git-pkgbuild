@@ -2,9 +2,9 @@
 # Custom patch applied for Arch
 
 pkgname=moneymanagerex-patched
-pkgver=1.9.1
+pkgver=1.6.4.r4381.g04a7fb143
 pkgrel=1
-pkgdesc="MoneyManagerEx is an easy-to-use personal finance suite. This package will always point to the newest tagged version."
+pkgdesc="MoneyManagerEx is an easy-to-use personal finance suite. This package will always point to the newest commit."
 arch=('x86_64')
 url="http://www.moneymanagerex.org/"
 license=('GPL')
@@ -15,7 +15,7 @@ replaces=('mmex')
 provides=('moneymanagerex')
 conflicts=('moneymanagerex')
 source=('file://CMP0037_policy.patch'
-        git+https://github.com/moneymanagerex/moneymanagerex.git#tag=v${pkgver})
+        git+https://github.com/moneymanagerex/moneymanagerex.git)
 sha512sums=('SKIP' 'SKIP')
 
 pkgver() {
